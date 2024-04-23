@@ -1,0 +1,27 @@
+[submodule "static/projects/grille"]
+	path = static/projects/grille
+	url = https://github.com/imohanvadivel/grille.git
+[submodule "static/projects/Glyphs-Tamil"]
+	path = static/projects/Glyphs-Tamil
+	url = https://github.com/imohanvadivel/Glyphs-Tamil.git
+[submodule "static/projects/web-sensors"]
+	path = static/projects/web-sensors
+	url = https://github.com/imohanvadivel/web-sensors.git
+[submodule "static/projects/Glyphs"]
+	path = static/projects/Glyphs
+	url = https://github.com/imohanvadivel/Glyphs.git
+[submodule "static/projects/p5js-playground"]
+	path = static/projects/p5js-playground
+	url = https://github.com/imohanvadivel/p5js-playground.git
+[submodule "static/projects/variable-font-playground"]
+	path = static/projects/variable-font-playground
+	url = https://github.com/imohanvadivel/variable-font-playground.git
+[submodule "static/projects/web-form-controls"]
+	path = static/projects/web-form-controls
+	url = https://github.com/imohanvadivel/web-form-controls.git
+[submodule "static/projects/black-scholes-model"]
+	path = static/projects/black-scholes-model
+	url = https://github.com/imohanvadivel/black-scholes-model.git
+[submodule "static/projects/MathML"]
+	path = static/projects/MathML
+	url = https://github.com/imohanvadivel/MathML.git

@@ -1,0 +1,16 @@
+<script context="module">
+	import h1 from './h1.svelte';
+	import h2 from './h2.svelte';
+	import p from './p.svelte';
+	import table from './Table/table.svelte';
+	import td from './Table/td.svelte';
+	import th from './Table/th.svelte';
+	import tr from './Table/tr.svelte';
+	import tbody from './Table/tbody.svelte';
+
+	import img from './img.svelte';
+
+	export { h1, h2, p, table, td, th, tr, tbody, img };
+</script>
+
+<slot />
