@@ -1,5 +1,5 @@
 <!-- svelte-ignore a11y-missing-attribute -->
-<img height="320" {...$$props} />
+<img {...$$props} />
 
 <style>
 	img {
