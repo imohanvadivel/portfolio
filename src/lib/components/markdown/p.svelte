@@ -6,6 +6,6 @@
 	p {
 		margin-block-end: 1.5rem;
 		color: var(--color-text);
-		opacity: 0.9;
+		opacity: 0.8;
 	}
 </style>
