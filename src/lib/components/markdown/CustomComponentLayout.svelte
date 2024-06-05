@@ -7,10 +7,10 @@
 	import th from './Table/th.svelte';
 	import tr from './Table/tr.svelte';
 	import tbody from './Table/tbody.svelte';
-
+	import li from "./li.svelte";
 	import img from './img.svelte';
 
-	export { h1, h2, p, table, td, th, tr, tbody, img };
+	export { h1, h2, p, table, td, th, tr, tbody, img, li };
 </script>
 
 <slot />

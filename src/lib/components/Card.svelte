@@ -42,12 +42,11 @@
 		cursor: pointer;
 	}
 
-	p{
+	p {
 		margin-block-start: 0.25rem;
 	}
 
-	p,
-	time {
+	p {
 		color: var(--color-text-secondary);
 		font-size: var(--font-size-medium);
 		user-select: none;
@@ -56,12 +55,17 @@
 
 	time {
 		font-weight: 500;
+		user-select: none;
+		cursor: auto;
 		font-size: var(--font-size-small);
 		margin-block-start: 0.25rem;
+		color: var(--color-text-secondary);
+		margin-top: 0.25rem;
 		/* font-family: 'jetbrains mono'; */
 	}
 
-	a, a:hover {
+	a,
+	a:hover {
 		text-decoration: none;
 	}
 </style>

@@ -2,7 +2,9 @@
 @import url(./reset.css);
 @import url(./type.css);
 @import url(./variables.css);
+@import url(./colors.css);
 @import url(./mediaQueries.css);
+@import url(./portfolio.css);
 
 html {
 	font-family: var(--sans-font-stack);
@@ -17,79 +19,12 @@ a {
 	color: var(--color-text);
 	text-underline-position: from-font;
 	text-underline-thickness: 0.0625rem;
-	text-decoration-color: var(--color-border-strong);
+	text-decoration-color: var(--color-text-tertiary);
 	white-space: nowrap;
 }
 
 a:hover {
 	text-decoration: underline;
-	text-decoration-color: var(--color-bg-brand);
-}
-
-:root {
-	--main-column: repeat(3, minmax(0, 1fr));
-	--main-column-gap: 2rem;
-	--max-content-width: 71.5rem;
-	@media (--medium-viewport) {
-		--main-column: repeat(2, minmax(0, 1fr));
-	}
-
-	@media (--small-viewport) {
-		--main-column: 1fr;
-	}
-}
-
-.main-grid {
-	display: grid;
-	grid-template-columns: var(--main-column);
-	grid-column-gap: var(--main-column-gap);
-}
-
-.main-wrapper {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	max-width: var(--max-content-width);
-	margin-inline: auto;
-	position: relative;
-	z-index: 5;
-	min-height: 96svh;
-	padding-inline: 2rem;
-	@media (--small-viewport) {
-		padding-inline: 1.5rem;
-	}
-}
-
-.main-wrapper footer {
-	margin-block-start: auto;
-}
-
-.hero-section {
-	grid-column: 1/3;
-	margin-block-start: 0.25rem;
-
-	@media (--small-viewport) {
-		grid-column: 1;
-	}
-}
-
-.primary-header {
-	font-family: 'Libre Baskerville', sans-serif;
-	font-size: var(--font-size-xlarge);
-	letter-spacing: -0.02em;
-	line-height: 1;
-	color: var(--color-text);
-	user-select: none;
-
-	@media (--small-viewport) {
-		margin-inline-start: -0.1rem;
-	}
-}
-
-.primary-desc {
-	font-size: var(--font-size-medium);
-	max-width: 28rem;
-	padding-block-start: 1rem;
-	color: var(--color-text);
-	user-select: none;
+	text-decoration-color: var(--color-text-brand);
+	text-underline-thickness: 0.5rem;
 }

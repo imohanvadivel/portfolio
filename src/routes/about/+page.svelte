@@ -23,7 +23,7 @@
 
 		<div aria-hidden="true" style="grid-column: 1/-1; height: 7rem;" />
 
-		<img src="/asset/mypic.jpg" alt="" />
+		<img src="/asset/mypic.jpg" alt="Headshot of Mohan Vadivel" />
 
 		<div class="first-para">
 			<p class="p1">

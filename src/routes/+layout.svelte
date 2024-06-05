@@ -70,7 +70,7 @@
 		pointer-events: none;
 
 		& div {
-			border-inline: 1px solid var(--color-border-tertiary);
+			border-inline: 1px solid var(--color-border-light);
 		}
 
 		@media (--small-viewport) {
