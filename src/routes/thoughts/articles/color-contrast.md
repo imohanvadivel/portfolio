@@ -20,7 +20,7 @@ The WCAG 2 was officially published on December 11, 2008. The simple contrast al
 
 Take a look at the image above, which column do you find more legible? Personally, I find the text in the second column to be significantly clearer and to have higher contrast compared to the first column. However, when these colors are fed into the WCAG 2 simple contrast algorithm, the color combinations in the first column meet the AAA conformance level for large text, whereas none of the color combination in the second column meet the required criteria.
 
-<Fig src="/asset/color-contrast/wcag2.png" alt="Contrast calculation using WCAG 2" height="320" />
+<Fig src="/asset/color-contrast/wcag2.png" alt="Contrast calculation using WCAG 2" />
 
 W3C is already aware of this issue, as [Andrew Somers started a discussion](https://github.com/w3c/wcag/issues/695) back in Apr, 2019. Fast forward 2 years, Accessible Perpetual Contrast Algorithm (APCA) was developed as a replacement for WCAG 2 simple contrast, and is now a part of the WCAG 3 Working Draft.
 
@@ -36,7 +36,7 @@ You might have noticed that the APCA values can be negative, unlike WCAG 2 where
 
 Now, let's input the color combinations from the previous example into the APCA algorithm.
 
-<Fig src="/asset/color-contrast/apca.png" alt="Contrast calculation using APCA" height="320" />
+<Fig src="/asset/color-contrast/apca.png" alt="Contrast calculation using APCA" />
 
 From the above image, it is clear that the APCA reports better contrast values than WCAG 2 simple contrast. Checkout the [conformance](https://readtech.org/ARC/tests/visual-readability-contrast/?tn=conform#conformance) for more information on interpreting APCA values.
 
@@ -48,11 +48,13 @@ Since WCAG 3 incorporating APCA is still in the draft phase, WCAG 2 simple contr
 
 Now, let's input the color combinations from the previous example into the BPCA algorithm.
 
-<Fig src="/asset/color-contrast/bpca.png" alt="Contrast calculation using BPCA" height="320" />
+<Fig src="/asset/color-contrast/bpca.png" alt="Contrast calculation using BPCA" />
 
 From the above image, it is clear that BPCA reports far better result in WCAG 2 ratios.
 
 ## Figma Plugin
+
+<Fig src="/asset/color-contrast/figma-plugin.png" alt='"Color Contrast" – Figma plugin' />
 
 As a personal hobby project, I've developed a Figma plugin capable of reporting contrast values using three different algorithms: WCAG 2, APCA, and BPCA. Users have the option to manually enter foreground and background colors or select text or a frame directly on the Figma canvas to automatically extract the colors.
 
