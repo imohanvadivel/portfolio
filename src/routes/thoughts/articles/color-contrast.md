@@ -56,7 +56,7 @@ From the above image, it is clear that BPCA reports far better result in WCAG 2 
 
 <Fig src="/asset/color-contrast/figma-plugin.png" alt='"Color Contrast" – Figma plugin' />
 
-As a personal hobby project, I've developed a Figma plugin capable of reporting contrast values using three different algorithms: WCAG 2, APCA, and BPCA. Users have the option to manually enter foreground and background colors or select text or a frame directly on the Figma canvas to automatically extract the colors.
+As a personal hobby project, I've developed a <a href="https://www.figma.com/community/plugin/1380599887933734771" target="_blank">Figma plugin</a> capable of reporting contrast values using three different algorithms: WCAG 2, APCA, and BPCA. Users have the option to manually enter foreground and background colors or select text or a frame directly on the Figma canvas to automatically extract the colors.
 
 <Info header="Why create a new plugin?">
 I personally used <a href="https://www.getstark.co/" target="_blank">Stark</a> for accessibility assessments, Stark has gained widespread popularity for such assessments, with its <a href="https://www.figma.com/community/plugin/732603254453395948" target="_blank">Figma plugin</a> being utilized by over 350,000 users. However, stark has several shortcomings:

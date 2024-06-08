@@ -1,5 +1,10 @@
 const projects = [
 	{
+		title: 'Color Contrast',
+		description: 'A Figma plugin to measure color contrast using the APCA, BPCA, and WCAG 2 algorithms.',
+		url: 'https://www.figma.com/community/plugin/1380599887933734771'
+	},
+	{
 		title: 'Component Utility',
 		description: 'A Figma plugin for effortlessly cloning and linking component sets.',
 		url: 'https://www.figma.com/community/plugin/1281680817111472375'
