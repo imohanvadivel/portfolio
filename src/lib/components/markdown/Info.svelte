@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { text } from '@sveltejs/kit';
-
 	export let header: string;
 	export let type: 'info' | 'warning' | 'danger' | 'success';
 

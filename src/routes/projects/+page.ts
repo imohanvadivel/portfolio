@@ -1,5 +1,10 @@
 const projects = [
 	{
+		title: 'Figblocks',
+		description: 'An open source Ul component library designed for building Figma Plugins with Svelte.',
+		url: 'https://figblocks.mohanvadivel.com'
+	},
+	{
 		title: 'Color Contrast',
 		description: 'A Figma plugin to measure color contrast using the APCA, BPCA, and WCAG 2 algorithms.',
 		url: 'https://www.figma.com/community/plugin/1380599887933734771'
