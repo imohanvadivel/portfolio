@@ -82,7 +82,8 @@
 		margin-block: 2.25rem;
 	}
 
-	article :global(figure img) {
+	article :global(figure img),
+	article :global(video) {
 		border: 1px solid var(--color-border);
 		border-radius: 0.5rem;
 	}
@@ -94,4 +95,10 @@
 		margin-block-start: 0.5rem;
 		letter-spacing: 0.01em;
 	}
+
+	article :global(b),
+	article :global(strong) {
+		font-weight: 500;
+	}
+
 </style>

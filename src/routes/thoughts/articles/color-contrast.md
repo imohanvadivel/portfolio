@@ -1,5 +1,5 @@
 ---
-title: Color Contrast
+title: Color contrast, a deep dive
 description: This article delves into methods for evaluating color contrast, focusing on the APCA, BPCA, and WCAG 2 algorithms.
 date: 2023-08-13
 slug: color-contrast
@@ -26,7 +26,7 @@ W3C is already aware of this issue, as [Andrew Somers started a discussion](http
 
 ## Accessible Perceptual Contrast Algorithm (APCA)
 
-<Info header="Info:">
+<Info header="Note:" type="info">
 At the time of writing this article, APCA is still under development, and WCAG 3 remains a Working Draft. APCA has not yet been officially recommended.
 </Info>
 

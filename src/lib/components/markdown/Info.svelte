@@ -53,4 +53,10 @@
 		margin-top: 0.5rem;
 		margin-left: 1.25rem;
 	}
+	section :global(p) {
+		margin: 0.5rem 0;
+	}
+	section :global(p:last-child) {
+		margin-bottom: unset;
+	}
 </style>
