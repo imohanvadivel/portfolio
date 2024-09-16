@@ -5,7 +5,7 @@
 
 <!-- svelte-ignore a11y-media-has-caption -->
  <div>
-	 <video autoplay loop>
+	 <video autoplay loop playsinline muted>
 		 <source {src} />
 	 </video>
 	 <caption>{alt}</caption>
