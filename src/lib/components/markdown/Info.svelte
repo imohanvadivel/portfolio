@@ -47,6 +47,7 @@
 		font-size: var(--font-size-small);
 		margin-bottom: 1.5rem;
 		color: var(--color-text);
+		overflow: auto;
 	}
 
 	section :global(ul) {
