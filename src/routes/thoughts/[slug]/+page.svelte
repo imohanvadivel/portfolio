@@ -12,10 +12,21 @@
 	export let data;
 
 	let title = data.title;
+	let description = data.description;
+	
 </script>
 
 <svelte:head>
 	<title>{title}</title>
+	<meta property="og:title" content={title} />
+	<meta name="twitter:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta name="twitter:description" content={description} />
+	<meta property="og:image" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:image:alt" content={title} />
+	<meta name="twitter:card" content="summary" />
+	<meta property="og:type" content="article" />
 </svelte:head>
 
 <div class="wrapper">
