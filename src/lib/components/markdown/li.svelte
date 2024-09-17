@@ -5,7 +5,7 @@
 <style>
 	li {
 		list-style: disc;
-		overflow: hidden;
+		/* overflow: hidden; */
 		text-overflow: ellipsis;
 	}
 	li::marker {
