@@ -5,12 +5,17 @@ const projects = [
 		url: 'https://figblocks.mohanvadivel.com'
 	},
 	{
-		title: 'Color Contrast',
+		title: 'Desk extension types',
+		description: 'TypeScript type definitions for authoring Zoho Desk extensions.',
+		url: 'https://github.com/imohanvadivel/desk-ext-types'
+	},
+	{
+		title: 'Color contrast',
 		description: 'A Figma plugin to measure color contrast using the APCA, BPCA, and WCAG 2 algorithms.',
 		url: 'https://www.figma.com/community/plugin/1380599887933734771'
 	},
 	{
-		title: 'Component Utility',
+		title: 'Component utility',
 		description: 'A Figma plugin for effortlessly cloning and linking component sets.',
 		url: 'https://www.figma.com/community/plugin/1281680817111472375'
 	},
