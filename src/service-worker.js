@@ -1,15 +1,6 @@
-// import { build, files, version, prerendered } from '$service-worker';
+const CACHE = `cache-v2`;
 
-// Create a unique cache name for this deployment
-const CACHE = `cache-v1`;
-
-const ASSETS = [
-	'/',
-	'/about',
-	'/projects',
-	'thoughts',
-	'/asset/mypic.jpg'
-];
+const ASSETS = ['/', '/about', '/projects', 'thoughts', '/asset/mypic.jpg'];
 
 self.addEventListener('install', (event) => {
 	// Create a new cache and add all files to it
@@ -19,6 +10,9 @@ self.addEventListener('install', (event) => {
 	}
 
 	event.waitUntil(addFilesToCache());
+
+	// Skip waiting to activate the service worker immediately
+	self.skipWaiting();
 });
 
 self.addEventListener('activate', (event) => {
@@ -30,6 +24,11 @@ self.addEventListener('activate', (event) => {
 	}
 
 	event.waitUntil(deleteOldCaches());
+
+	// Claim clients immediately after activation
+	self.clients.claim();
+
+	console.log('Service Worker activated');
 });
 
 self.addEventListener('fetch', (event) => {
