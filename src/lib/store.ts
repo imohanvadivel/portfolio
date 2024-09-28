@@ -35,30 +35,37 @@ function PagesStore() {
 
 export const Pages = PagesStore();
 
-// Theme (light and dark mode)
-export const LightMode = writable(true);
+// Function to get the value from cookies
+function getCookie(name:string) {
+	if (!browser) return null; // Ensure it's running on the client
+	const value = `; ${document.cookie}`;
+	const parts = value.split(`; ${name}=`);
+	if (parts.length === 2) return parts.pop().split(';').shift();
+	return null;
+}
 
+// Initialize the theme from cookies
+const storedThemeFromCookies = browser ? getCookie('lightMode') : null;
+const initialTheme = storedThemeFromCookies === 'false' ? false : true; // Default to light mode if not set
+
+// Create a writable store for LightMode
+export const LightMode = writable(initialTheme);
+
+// Subscribe to changes in the LightMode store
 LightMode.subscribe((mode) => {
-	if (mode) {
-		if (browser) {
-			localStorage.setItem('lightMode', 'true');
-			document.documentElement.classList.remove('dark-mode');
+	if (browser) {
+			// Save the preference in both localStorage and cookies
+			localStorage.setItem('lightMode', mode ? 'true' : 'false');
+			document.cookie = `lightMode=${mode};path=/;`;
 
+			// Toggle the dark-mode class
+			document.documentElement.classList.toggle('dark-mode', !mode);
+
+			// Update meta theme-color tag for mobile browsers
 			const meta = document.querySelector('meta[name="theme-color"]') as HTMLMetaElement;
-			if (meta) meta.content = '#FFFFFF';
-
-			document.cookie = 'lightMode=true';
-		}
-	} else {
-		if (browser) {
-			localStorage.setItem('lightMode', 'false');
-			document.documentElement.classList.add('dark-mode');
-
-			const meta = document.querySelector('meta[name="theme-color"]') as HTMLMetaElement;
-			if (meta) meta.content = '#191919';
-
-			document.cookie = 'lightMode=false';
-		}
+			if (meta) {
+					meta.content = mode ? '#FFFFFF' : '#191919';
+			}
 	}
 });
 

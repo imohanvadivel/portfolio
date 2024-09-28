@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { page, navigating } from '$app/stores';
-	import { Pages } from '$lib/store';
+	import { LightMode, Pages } from '$lib/store';
 	import '$lib/styles/global.css';
 	import { onMount } from 'svelte';
 	import { get } from 'svelte/store';
 
-	// Handling the navigation
 	onMount(() => {
+		// Handling the navigation
 		const allowedPathNames = ['/', '/home', '/about', '/projects', '/thoughts'];
 
 		// Inital page load navigation

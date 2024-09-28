@@ -5,23 +5,41 @@
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Mohan Vadivel</title>
-		<link rel="canonical" href="https://mohanvadivel.com/">
-		<meta name="description" content="Product designer, software & hardware tinkerer.">
-    <meta name="twitter:title" content="Mohan vadivel / ">
-    <meta name="twitter:description" content="Product designer, software & hardware tinkerer.">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://mohanvadivel.com/asset/og.png">
-    <meta name="twitter:image:alt" content="Mohan vadivel">
-    <meta name="twitter:site" content="@imohanvadivel">
-    <meta name="twitter:creator" content="@imohanvadivel">
-    <meta property="og:locale" content="en_GB">
-    <meta property="og:title" content="Mohan Vadivel">
-    <meta property="og:site_name" content="mohanvadivel.com">
-    <meta property="og:description" content="Product designer, software & hardware tinkerer.">
-    <meta property="og:url" content="https://mohanvadivel.com">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://mohanvadivel.com/asset/og.png">
+		<link rel="canonical" href="https://mohanvadivel.com/" />
+		<meta name="description" content="Product designer, software & hardware tinkerer." />
+		<meta name="twitter:title" content="Mohan vadivel / " />
+		<meta name="twitter:description" content="Product designer, software & hardware tinkerer." />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:image" content="https://mohanvadivel.com/asset/og.png" />
+		<meta name="twitter:image:alt" content="Mohan vadivel" />
+		<meta name="twitter:site" content="@imohanvadivel" />
+		<meta name="twitter:creator" content="@imohanvadivel" />
+		<meta property="og:locale" content="en_GB" />
+		<meta property="og:title" content="Mohan Vadivel" />
+		<meta property="og:site_name" content="mohanvadivel.com" />
+		<meta property="og:description" content="Product designer, software & hardware tinkerer." />
+		<meta property="og:url" content="https://mohanvadivel.com" />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="https://mohanvadivel.com/asset/og.png" />
 		<meta name="theme-color" content="#191919" />
+
+		<!-- Handling theme change via cookie -->
+		<script>
+			(function () {
+				const theme = /lightMode=false/.test(document.cookie) ? 'false' : 'true';
+
+				const isLightMode = theme !== 'false'; // Default to light mode if no cookie is found
+
+				if (isLightMode) {
+					document.documentElement.classList.remove('dark-mode');
+					document.querySelector('meta[name="theme-color"]').setAttribute('content', '#FFFFFF');
+				} else {
+					document.documentElement.classList.add('dark-mode');
+					document.querySelector('meta[name="theme-color"]').setAttribute('content', '#191919');
+				}
+			})();
+		</script>
+
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
