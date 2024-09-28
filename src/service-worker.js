@@ -1,12 +1,14 @@
-import { build, files, version, prerendered } from '$service-worker';
+// import { build, files, version, prerendered } from '$service-worker';
 
 // Create a unique cache name for this deployment
-const CACHE = `cache-${version}`;
+const CACHE = `cache-v1`;
 
 const ASSETS = [
-	...build, // the app itself
-	...files, // everything in `static`
-	...prerendered // any prerendered pages
+	'/',
+	'/about',
+	'/projects',
+	'thoughts',
+	'/asset/mypic.jpg'
 ];
 
 self.addEventListener('install', (event) => {
