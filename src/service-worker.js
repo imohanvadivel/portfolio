@@ -1,4 +1,4 @@
-const CACHE = `cache-v4`;
+const CACHE = `cache-v5`;
 
 const ASSETS = ['/', '/about', '/projects', 'thoughts', '/asset/mypic.jpg'];
 
@@ -6,7 +6,14 @@ self.addEventListener('install', (event) => {
 	// Create a new cache and add all files to it
 	async function addFilesToCache() {
 		const cache = await caches.open(CACHE);
-		await cache.addAll(ASSETS);
+
+		console.log('Caching assets:', ASSETS);
+		try {
+			await cache.addAll(ASSETS);
+		} catch (err) {
+			console.log('failed to cache some assets');
+			console.log(err);
+		}
 	}
 
 	event.waitUntil(addFilesToCache());
@@ -19,7 +26,10 @@ self.addEventListener('activate', (event) => {
 	// Remove previous cached data from disk
 	async function deleteOldCaches() {
 		for (const key of await caches.keys()) {
-			if (key !== CACHE) await caches.delete(key);
+			if (key !== CACHE) {
+				console.log('Deleting old caches: ', key);
+				await caches.delete(key);
+			}
 		}
 	}
 
@@ -70,6 +80,7 @@ self.addEventListener('fetch', (event) => {
 
 			return response;
 		} catch (err) {
+			console.log(err, event.request);
 			const response = await cache.match(event.request);
 
 			if (response) {
