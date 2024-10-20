@@ -96,3 +96,5 @@ const projects = [
 export function load() {
 	return { projects };
 }
+
+export const prerender = true;

@@ -22,3 +22,5 @@ export function load() {
 
 	return { articles };
 }
+
+export const prerender = true;

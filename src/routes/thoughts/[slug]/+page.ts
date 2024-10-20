@@ -8,3 +8,5 @@ export async function load({ params }) {
 		...post.metadata
 	};
 }
+
+export const prerender = true;
