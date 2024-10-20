@@ -1,4 +1,4 @@
-const CACHE = `cache-v3`;
+const CACHE = `cache-v4`;
 
 const ASSETS = ['/', '/about', '/projects', 'thoughts', '/asset/mypic.jpg'];
 
@@ -55,6 +55,8 @@ self.addEventListener('fetch', (event) => {
 		// fall back to the cache if we're offline
 		try {
 			const response = await fetch(event.request);
+
+			console.log('fetching', event.request.url, response);
 
 			// if we're offline, fetch can return a value that is not a Response
 			// instead of throwing - and we can't pass this non-Response to respondWith
